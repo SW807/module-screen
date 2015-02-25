@@ -17,7 +17,7 @@ public class ScreenListener {
         _context = context;
         intentFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
-        //registerReceiver
+
         broadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -28,9 +28,11 @@ public class ScreenListener {
                 }
             }
         };
-        _context.registerReceiver(broadcastReceiver, intentFilter);
     }
 
+    public void startSensor() {
+        _context.registerReceiver(broadcastReceiver, intentFilter);
+    }
     public void stopSensor() {
         _context.unregisterReceiver(broadcastReceiver);
     }
