@@ -37,4 +37,9 @@ public class ScreenListener implements ISensor{
     public void stopSensor() {
         _context.unregisterReceiver(broadcastReceiver);
     }
+
+    @Override
+    public void sensorParameters(Intent intent) {
+        
+    }
 }
