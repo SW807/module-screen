@@ -43,12 +43,12 @@ public class MainActivity extends ActionBarActivity {
     public void onClick(View view) {
 
         if(flag){
-            Intent i= new Intent(this, Service.class);
+            Intent i= new Intent(this, PsyLogService.class);
             this.startService(i);
             flag = false;
         }
         else{
-            Intent i = new Intent(this, Service.class);
+            Intent i = new Intent(this, PsyLogService.class);
             this.stopService(i);
             flag = true;
         }
