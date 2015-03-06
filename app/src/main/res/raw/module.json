@@ -1,0 +1,12 @@
+{
+	"name": "Screen",
+	"_version": 1.0,
+	"tables": [
+		{
+			"name": "screenonoff",
+			"columns": [
+				{ "name": "screenon", "dataType": "INTEGER", "_unit": "true/false" }
+			]
+		}
+	]
+}
