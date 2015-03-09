@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.psylog_screenonoffmodule;
+package dk.aau.cs.psylog.screenonoff;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

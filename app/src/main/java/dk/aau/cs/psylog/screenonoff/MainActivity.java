@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.psylog_screenonoffmodule;
+package dk.aau.cs.psylog.screenonoff;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
