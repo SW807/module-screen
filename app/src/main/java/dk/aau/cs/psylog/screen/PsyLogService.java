@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.screenonoff;
+package dk.aau.cs.psylog.screen;
 
 import dk.aau.cs.psylog.module_lib.SuperService;
 

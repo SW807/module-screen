@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "dk.aau.cs.psylog.psylog_screenonoffmodule"
+        applicationId "dk.aau.cs.psylog.screen"
         minSdkVersion 18
         targetSdkVersion 21
         versionCode 1
