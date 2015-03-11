@@ -1,9 +1,12 @@
 package dk.aau.cs.psylog.screen;
 
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.util.Log;
 import dk.aau.cs.psylog.module_lib.ISensor;
 
@@ -14,19 +17,25 @@ public class ScreenListener implements ISensor{
     private IntentFilter intentFilter;
     private Context _context;
 
+    ContentResolver resolver;
     public ScreenListener(Context context){
         _context = context;
         intentFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
 
+        resolver = context.getContentResolver();
+
         broadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
+                Uri uri = Uri.parse("content://dk.aau.cs.psylog.psylog" + "/screenonoff");
+                ContentValues values = new ContentValues();
                 if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
-                    Log.d("PsyLogScreenOFF", Intent.ACTION_SCREEN_OFF);
+                    values.put("screenon",0);
                 } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
-                    Log.d("PsyLogScreenON", Intent.ACTION_SCREEN_ON);
+                    values.put("screenon",1);
                 }
+                resolver.insert(uri, values);
             }
         };
     }
