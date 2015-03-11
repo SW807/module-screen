@@ -32,10 +32,11 @@ public class ScreenListener implements ISensor{
                 ContentValues values = new ContentValues();
                 if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
                     values.put("screenon",0);
+                    resolver.insert(uri, values);
                 } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
                     values.put("screenon",1);
+                    resolver.insert(uri, values);
                 }
-                resolver.insert(uri, values);
             }
         };
     }
