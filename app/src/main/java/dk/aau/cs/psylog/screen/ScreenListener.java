@@ -28,7 +28,7 @@ public class ScreenListener implements ISensor{
         broadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                Uri uri = Uri.parse("content://dk.aau.cs.psylog.psylog" + "/screenonoff");
+                Uri uri = Uri.parse(DBAccessContract.DBACCESS_CONTENTPROVIDER + "screenonoff");
                 ContentValues values = new ContentValues();
                 if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
                     values.put("screenon",0);
