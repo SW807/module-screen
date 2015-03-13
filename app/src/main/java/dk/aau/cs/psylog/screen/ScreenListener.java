@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
-import android.util.Log;
+import dk.aau.cs.psylog.module_lib.DBAccessContract;
 import dk.aau.cs.psylog.module_lib.ISensor;
 
 
