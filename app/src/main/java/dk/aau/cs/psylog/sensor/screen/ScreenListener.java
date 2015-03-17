@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.screen;
+package dk.aau.cs.psylog.sensor.screen;
 
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
