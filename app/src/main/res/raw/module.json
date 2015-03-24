@@ -1,6 +1,7 @@
 {
 	"name": "screen",
 	"_version": 1.0,
+    "_description": "Measures and stores screen activity, specifically when it is turned on/off.",
 	"tables": [
 		{
 			"name": "screenonoff",
