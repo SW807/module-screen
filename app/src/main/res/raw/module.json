@@ -1,5 +1,6 @@
 {
 	"name": "screen",
+    "_userfriendlyname": "Skærm status",
 	"_version": 1.0,
     "_description": "Måler og opbevarer skærm aktivitet, specifikt når den tændes eller slukkes.",
 	"tables": [
